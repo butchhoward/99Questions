@@ -10,10 +10,11 @@ myFlatten (List (x:xs)) = myFlatten x ++ myFlatten (List xs)
 
 
 main = do
-	-- why does this fail??
 	--if [] == myFlatten (List [])
-	--	then putStrLn "pass"
-	--	else putStrLn "fail"
+		-- is invalid because ??
+	if null (myFlatten (List []))
+		then putStrLn "pass"
+		else putStrLn "fail"
 	if [1] == myFlatten (Elem 1)
 		then putStrLn "pass"
 		else putStrLn "fail"	
